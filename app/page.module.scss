@@ -1,0 +1,14 @@
+$light-color-main: #c1c8c8;
+$light-color-sub-1: #9eb0b0;
+$light-color-sub-2: #929797;
+$light-text: #000;
+
+$dark-color-main: #051212;
+$dark-color-sub-1: #020707;
+$dark-color-sub-2: #011818;
+$dark-text: #fff;
+
+@mixin theme-changer($text, $bg) {
+  background-color: $bg;
+  color: $text;
+}
