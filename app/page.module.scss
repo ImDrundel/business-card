@@ -1,14 +1,18 @@
-$light-color-main: #c1c8c8;
-$light-color-sub-1: #9eb0b0;
-$light-color-sub-2: #929797;
-$light-text: #000;
-
-$dark-color-main: #051212;
-$dark-color-sub-1: #020707;
-$dark-color-sub-2: #011818;
-$dark-text: #fff;
-
+@import "colors-variables.scss";
 @mixin theme-changer($text, $bg) {
   background-color: $bg;
   color: $text;
+}
+.container {
+  padding: 20px;
+  height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.dark {
+  background-color: $dark-color-main;
+  color: $dark-text;
+}
+.light {
+  background-color: $light-color-main;
+  color: $light-text;
 }
