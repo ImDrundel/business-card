@@ -2,7 +2,7 @@
 import style from "./page.module.scss"
 import { createContext, useState } from "react"
 import ButtonThemeSwitch from "./ui/button-theme-switch/buttonThemeSwitch"
-
+import MyInfo from "./moduls/MyInfo/MyInfo"
 interface ThemeContextType {
   theme: string
   toggleTheme: () => void
@@ -18,11 +18,15 @@ export default function Home() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`${style.container} ${style[theme]}`}>
-        <header>
-          Header
+        <header className={style.headerg}>
           <ButtonThemeSwitch />
         </header>
-        <main>Main</main>
+        <main>
+          <MyInfo />
+          {/* <TodoLost/> */}
+          {/* <Games/> */}
+          {/* <MyProjects/> */}
+        </main>
         <footer>Footer</footer>
       </div>
     </ThemeContext.Provider>

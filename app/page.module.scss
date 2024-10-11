@@ -1,18 +1,51 @@
 @import "colors-variables.scss";
-@mixin theme-changer($text, $bg) {
-  background-color: $bg;
-  color: $text;
+@mixin theme-changer($text, $color-main, $color-sub-1, $color-sub-2) {
+  header {
+    background-color: $color-sub-1;
+    transition: background-color 0.5s ease, color 0.4s ease;
+    color: $text;
+  }
+  main {
+    background-color: $color-main;
+    transition: background-color 0.5s ease, color 0.4s ease;
+    color: $text;
+  }
+  footer {
+    background-color: $color-sub-1;
+    transition: background-color 0.5s ease, color 0.4s ease;
+    color: $text;
+  }
 }
-.container {
-  padding: 20px;
-  height: 100vh;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
+
 .dark {
-  background-color: $dark-color-main;
-  color: $dark-text;
+  @include theme-changer(
+    $dark-text,
+    $dark-color-main,
+    $dark-color-sub-1,
+    $dark-color-sub-2
+  );
 }
 .light {
-  background-color: $light-color-main;
-  color: $light-text;
+  @include theme-changer(
+    $light-text,
+    $light-color-main,
+    $light-color-sub-1,
+    $light-color-sub-2
+  );
+}
+
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  header {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  footer {
+    padding: 10px;
+  }
 }

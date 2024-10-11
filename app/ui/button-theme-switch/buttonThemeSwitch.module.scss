@@ -6,9 +6,11 @@
 }
 .themeSwitch.dark {
   background: $light-color-main;
+  transition: background-color 0.5s ease, color 0.4s ease;
   color: $light-text;
 }
 .themeSwitch.light {
   background: $dark-color-main;
+  transition: background-color 0.5s ease, color 0.4s ease;
   color: $dark-text;
 }

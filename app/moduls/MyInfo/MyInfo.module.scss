@@ -1,0 +1,51 @@
+@import "@/colors-variables.scss";
+.dark {
+  border: 3px red solid;
+}
+.light {
+  border: 3px black solid;
+}
+.container {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-areas: "photo info info" "photo experience achievements" "photo links links";
+  padding: 10px;
+}
+
+.photo {
+  grid-area: photo;
+  border: 1px red solid;
+  margin: 5px;
+  padding: 5px;
+}
+.info {
+  grid-area: info;
+  border: 1px red solid;
+  margin: 5px;
+  padding: 5px;
+}
+.achievements {
+  grid-area: achievements;
+  border: 1px red solid;
+  margin: 5px;
+  padding: 5px;
+}
+.experience {
+  grid-area: experience;
+  border: 1px red solid;
+  margin: 5px;
+  padding: 5px;
+}
+.links {
+  grid-area: links;
+  border: 1px red solid;
+  margin: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  .linkButton {
+    border-radius: 10%;
+  }
+}
