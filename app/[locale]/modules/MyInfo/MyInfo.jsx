@@ -5,8 +5,10 @@ import github from "./img/github.svg"
 import djinni from "./img/djinni.svg"
 import linkedin from "./img/linkedin.svg"
 import profilePhoto from "./img/profilePhoto.jpg"
+import { useTranslation } from "react-i18next"
 
 export default function MyInfo() {
+  const { t } = useTranslation("MyInfo")
   return (
     <div className={style.container}>
       <div className={style.photo}>
@@ -30,24 +32,33 @@ export default function MyInfo() {
         labore ab dicta, vitae debitis ullam consectetur iste expedita!
       </div>
       <div className={style.links}>
-        <div className={style.linkButton}>
-          <Link href={"https://github.com/ImDrundel"}>
+        <div>
+          <Link
+            className={style.linkButton}
+            href={"https://github.com/ImDrundel"}
+          >
             <Image src={github} alt="playlist" width={14} height={14} />
             GitHub
           </Link>
         </div>
-        <div className={style.linkButton}>
-          <Link href={"https://djinni.co/my/profile/"}>
+        <div>
+          <Link
+            className={style.linkButton}
+            href={"https://djinni.co/my/profile/"}
+          >
             <Image src={djinni} alt="djinni" height={20} />
             Djinni
           </Link>
         </div>
         <div className={style.linkButton}>
           <Image src={github} alt="playlist" width={14} height={14} />
-          Mail
+          {t("mail")}
         </div>
-        <div className={style.linkButton}>
-          <Link href={"https://www.linkedin.com/in/iamdrundel/"}>
+        <div>
+          <Link
+            className={style.linkButton}
+            href={"https://www.linkedin.com/in/iamdrundel/"}
+          >
             <Image src={linkedin} alt="linkedin" width={14} height={14} />
             LinkdIn
           </Link>

@@ -1,8 +1,9 @@
 @import "colors-variables.scss";
+
 .themeSwitch {
   width: min-content;
   height: min-content;
-  padding: 1px;
+  padding: 5px;
 }
 .themeSwitch.dark {
   background: $light-color-main;

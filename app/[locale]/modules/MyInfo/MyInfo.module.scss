@@ -1,10 +1,6 @@
-@import "@/colors-variables.scss";
-.dark {
-  border: 3px red solid;
-}
-.light {
-  border: 3px black solid;
-}
+// @import "@/colors-variables.scss";
+@import "colors-variables.scss";
+
 .container {
   display: grid;
   grid-template-columns: 150px 1fr 1fr;
@@ -14,38 +10,41 @@
 
 .photo {
   grid-area: photo;
-  border: 1px red solid;
+  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .info {
   grid-area: info;
-  border: 1px red solid;
+  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .achievements {
   grid-area: achievements;
-  border: 1px red solid;
+  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .experience {
   grid-area: experience;
-  border: 1px red solid;
+  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .links {
   grid-area: links;
-  border: 1px red solid;
+  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
-  .linkButton {
-    border-radius: 10%;
-  }
+}
+
+.linkButton {
+  font-size: large;
+  border-radius: 10%;
+  padding: 5px;
 }

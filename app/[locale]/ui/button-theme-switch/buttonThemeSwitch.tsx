@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ThemeContext } from "@/app/page"
+import { ThemeContext } from "@/app/[locale]/page"
 import style from "./buttonThemeSwitch.module.scss"
 
 export default function ButtonThemeSwitch() {
