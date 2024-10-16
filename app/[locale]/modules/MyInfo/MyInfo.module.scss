@@ -10,31 +10,26 @@
 
 .photo {
   grid-area: photo;
-  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .info {
   grid-area: info;
-  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .achievements {
   grid-area: achievements;
-  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .experience {
   grid-area: experience;
-  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
 }
 .links {
   grid-area: links;
-  // border: 1px red solid;
   margin: 5px;
   padding: 5px;
   display: grid;
@@ -45,6 +40,15 @@
 
 .linkButton {
   font-size: large;
-  border-radius: 10%;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.linkButton.light {
+  color: $light-text;
+  border: 1px $light-text solid;
+}
+.linkButton.dark {
+  color: $dark-text;
+  border: 1px $dark-text solid;
 }

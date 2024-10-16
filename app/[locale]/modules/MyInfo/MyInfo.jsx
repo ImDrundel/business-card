@@ -1,13 +1,19 @@
+import { useContext } from "react"
+import { ThemeContext } from "@/app/[locale]/page"
 import Link from "next/link"
 import Image from "next/image"
 import style from "./MyInfo.module.scss"
 import github from "./img/github.svg"
-import djinni from "./img/djinni.svg"
 import linkedin from "./img/linkedin.svg"
+import djinni from "./img/djinni.svg"
+import mail from "./img/mail.svg"
 import profilePhoto from "./img/profilePhoto.jpg"
 import { useTranslation } from "react-i18next"
 
 export default function MyInfo() {
+  const context = useContext(ThemeContext)
+  const { theme } = context
+
   const { t } = useTranslation("MyInfo")
   return (
     <div className={style.container}>
@@ -34,32 +40,32 @@ export default function MyInfo() {
       <div className={style.links}>
         <div>
           <Link
-            className={style.linkButton}
+            className={`${style.linkButton} ${style[theme]}`}
             href={"https://github.com/ImDrundel"}
           >
-            <Image src={github} alt="playlist" width={14} height={14} />
+            <Image src={github} alt="playlist" width={18} height={18} />
             GitHub
           </Link>
         </div>
         <div>
           <Link
-            className={style.linkButton}
+            className={`${style.linkButton} ${style[theme]}`}
             href={"https://djinni.co/my/profile/"}
           >
             <Image src={djinni} alt="djinni" height={20} />
             Djinni
           </Link>
         </div>
-        <div className={style.linkButton}>
-          <Image src={github} alt="playlist" width={14} height={14} />
+        <div className={`${style.linkButton} ${style[theme]}`}>
+          <Image src={mail} alt="playlist" width={20} height={20} />
           {t("mail")}
         </div>
         <div>
           <Link
-            className={style.linkButton}
+            className={`${style.linkButton} ${style[theme]}`}
             href={"https://www.linkedin.com/in/iamdrundel/"}
           >
-            <Image src={linkedin} alt="linkedin" width={14} height={14} />
+            <Image src={linkedin} alt="linkedin" width={20} height={20} />
             LinkdIn
           </Link>
         </div>
