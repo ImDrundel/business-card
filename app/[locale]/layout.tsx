@@ -11,6 +11,7 @@ interface Params {
   locale: string
 }
 const i18nNamespaces = ["home", "MyInfo", "Games", "MyProjects", "TodoList"]
+
 export default async function RootLayout({
   params: { locale },
   children,

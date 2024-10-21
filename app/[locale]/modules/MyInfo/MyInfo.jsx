@@ -41,28 +41,37 @@ export default function MyInfo() {
         <div>
           <Link
             className={`${style.linkButton} ${style[theme]}`}
+            target="_blank"
+            rel="noopener noreferrer"
             href={"https://github.com/ImDrundel"}
           >
             <Image src={github} alt="playlist" width={18} height={18} />
             GitHub
           </Link>
         </div>
+
         <div>
           <Link
             className={`${style.linkButton} ${style[theme]}`}
+            target="_blank"
+            rel="noopener noreferrer"
             href={"https://djinni.co/my/profile/"}
           >
             <Image src={djinni} alt="djinni" height={20} />
             Djinni
           </Link>
         </div>
+
         <div className={`${style.linkButton} ${style[theme]}`}>
           <Image src={mail} alt="playlist" width={20} height={20} />
           {t("mail")}
         </div>
+
         <div>
           <Link
             className={`${style.linkButton} ${style[theme]}`}
+            target="_blank"
+            rel="noopener noreferrer"
             href={"https://www.linkedin.com/in/iamdrundel/"}
           >
             <Image src={linkedin} alt="linkedin" width={20} height={20} />

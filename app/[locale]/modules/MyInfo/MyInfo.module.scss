@@ -10,28 +10,22 @@
 
 .photo {
   grid-area: photo;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 .info {
   grid-area: info;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 .achievements {
   grid-area: achievements;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 .experience {
   grid-area: experience;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 .links {
   grid-area: links;
-  margin: 5px;
-  padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -42,13 +36,16 @@
   font-size: large;
   border-radius: 10px;
   padding: 5px 10px;
-}
-
-.linkButton.light {
-  color: $light-text;
-  border: 1px $light-text solid;
-}
-.linkButton.dark {
-  color: $dark-text;
-  border: 1px $dark-text solid;
+  &.light {
+    color: $light-text;
+    border: 1px $light-text solid;
+  }
+  &.dark {
+    color: $dark-text;
+    border: 1px $dark-text solid;
+  }
+  &:hover {
+    color: #fff;
+    font-size: larger;
+  }
 }

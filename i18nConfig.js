@@ -1,6 +1,6 @@
 const i18nConfig = {
   locales: ["en", "uk"],
   defaultLocale: "en",
-  prefixDefault: true,
+  // prefixDefault: true,
 }
 module.exports = i18nConfig

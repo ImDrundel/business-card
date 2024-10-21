@@ -1,0 +1,27 @@
+@import "colors-variables.scss";
+
+// ThemeContext.Provider does not wrap the page with a 404 error. The page will always have a dark theme with no possibility to change it
+.container {
+  height: 100vh;
+  background-color: $dark-color-main;
+  color: $dark-text;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 48vh;
+  div {
+    margin-bottom: 20px;
+  }
+}
+
+.link {
+  font-size: large;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 20px;
+  color: $dark-text;
+  border: 1px $dark-text solid;
+  &:hover {
+    color: #fff;
+    font-size: larger;
+  }
+}
