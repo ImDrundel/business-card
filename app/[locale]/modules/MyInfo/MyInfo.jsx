@@ -27,10 +27,10 @@ export default function MyInfo() {
         ab asperiores rerum similique.
       </div>
       <div className={style.achievements}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-        ducimus ipsam necessitatibus doloremque praesentium atque a maxime, hic
-        delectus esse qui eius quia voluptates assumenda molestiae totam! Illo,
-        corrupti fugit?
+        <li>github</li>
+        <li>Scss</li>
+        <li>NextJS</li>
+        <li>Typescript</li>
       </div>
       <div className={style.experience}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
@@ -45,7 +45,7 @@ export default function MyInfo() {
             rel="noopener noreferrer"
             href={"https://github.com/ImDrundel"}
           >
-            <Image src={github} alt="playlist" width={18} height={18} />
+            <Image src={github} alt="github" width={18} height={18} />
             GitHub
           </Link>
         </div>
@@ -62,9 +62,14 @@ export default function MyInfo() {
           </Link>
         </div>
 
-        <div className={`${style.linkButton} ${style[theme]}`}>
-          <Image src={mail} alt="playlist" width={20} height={20} />
-          {t("mail")}
+        <div>
+          <Link
+            className={`${style.linkButton} ${style[theme]}`}
+            href={"mailto:andcher53@gmail.com"}
+          >
+            <Image src={mail} alt="mail" width={20} height={20} />
+            {t("mail")}
+          </Link>
         </div>
 
         <div>

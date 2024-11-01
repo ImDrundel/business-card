@@ -3,8 +3,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: 150px 1fr 1fr;
-  grid-template-areas: "photo info info" "photo experience achievements" "photo links links";
+  grid-template-columns: 150px max-content 1fr;
+  grid-template-areas: "photo info info" "photo achievements experience" "photo links links";
   padding: 10px;
 }
 
@@ -15,6 +15,7 @@
 .info {
   grid-area: info;
   padding: 10px;
+  font-size: 1.2rem;
 }
 .achievements {
   grid-area: achievements;
@@ -27,13 +28,13 @@
 .links {
   grid-area: links;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
 }
 
 .linkButton {
-  font-size: large;
+  font-size: 1.2rem;
   border-radius: 10px;
   padding: 5px 10px;
   &.light {
@@ -46,6 +47,40 @@
   }
   &:hover {
     color: #fff;
-    font-size: larger;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    .photo {
+      width: 200px;
+    }
+    grid-template-columns: 210px 1fr;
+    grid-template-areas: "photo info" "achievements experience" "links links";
+  }
+  .linkButton {
+    font-size: 1.1rem;
+    padding: 5px 5px;
+    width: max-content;
+    white-space: nowrap;
+    &:hover {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    .photo {
+      justify-self: center;
+    }
+    grid-template-columns: 1fr;
+    grid-template-areas: "photo" "info" "experience" "achievements" "links";
+  }
+  .links {
+    grid-template-columns: none;
+    height: 180px;
   }
 }
