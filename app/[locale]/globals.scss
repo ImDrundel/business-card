@@ -1,1 +1,12 @@
 @import "reset.scss";
+@import "colors-variables.scss";
+
+html,
+body {
+  overflow-x: hidden;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: $dark-color-sub-2 !important;
+  //“impotent” is necessary because otherwise Swiper styles overwrite styles in global.scss
+}

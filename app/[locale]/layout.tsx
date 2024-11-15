@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import "./globals.scss"
 import initTranstation from "../i18n"
 import TranslationsProvider from "@/app/[locale]/components/TranslationsProvider"
-import localFonts from "next/font/local"
 
 export const metadata: Metadata = {
   title: "Andrew's card",
@@ -12,10 +11,6 @@ interface Params {
   locale: string
 }
 const i18nNamespaces = ["home", "MyInfo", "Games", "MyProjects", "TodoList"]
-
-const myFont = localFonts({
-  src: "./fonts/LXGWWenKaiTC-Regular.ttf",
-})
 
 export default async function RootLayout({
   params: { locale },
@@ -32,7 +27,7 @@ export default async function RootLayout({
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <html lang="en" className={myFont.className}>
+      <html lang="en">
         <body>{children}</body>
       </html>
     </TranslationsProvider>

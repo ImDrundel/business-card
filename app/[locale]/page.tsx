@@ -4,9 +4,9 @@ import { createContext, useState } from "react"
 import ButtonThemeSwitch from "./ui/button-theme-switch/buttonThemeSwitch"
 import ButtonsLanguageChoice from "./ui/buttons-language-choice/buttonsLanguageChoice"
 import MyInfo from "./modules/MyInfo/MyInfo"
-import TodoList from "./modules/TodoList/TodoList"
-import MyProjects from "./modules/MyProjects/MyProjects"
-import Games from "./modules/Games/Games"
+import MyProjectsTest from "./modules/MyProjects/MyProjects"
+// import TodoList from "./modules/TodoList/TodoList"
+// import Games from "./modules/Games/Games"
 import { useTranslation } from "react-i18next"
 
 interface ThemeContextType {
@@ -27,15 +27,15 @@ export default function Home() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`${style.container} ${style[theme]}`}>
         <header>
-          {t("header")}
+          <div className={style.title}>{t("header")}</div>
           <ButtonsLanguageChoice />
           <ButtonThemeSwitch />
         </header>
         <main>
           <MyInfo />
-          <MyProjects />
-          <TodoList />
-          <Games />
+          <MyProjectsTest />
+          {/* <TodoList /> */}
+          {/* <Games /> */}
         </main>
         <footer>{t("footer")}</footer>
       </div>

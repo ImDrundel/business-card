@@ -16,9 +16,14 @@ export default function MyInfo() {
 
   const { t } = useTranslation("MyInfo")
   return (
-    <div className={style.container}>
-      <div className={style.photo}>
-        <Image src={profilePhoto} alt="profile photo" height={1920} />
+    <div className={`${style.container} ${style[theme]}`}>
+      <div className={style.photoBox}>
+        <Image
+          className={style.photo}
+          src={profilePhoto}
+          alt="profile photo"
+          height={1920}
+        />
       </div>
       <div className={style.info}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti

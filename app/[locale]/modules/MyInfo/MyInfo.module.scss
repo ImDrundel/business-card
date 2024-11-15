@@ -6,11 +6,34 @@
   grid-template-columns: 150px max-content 1fr;
   grid-template-areas: "photo info info" "photo achievements experience" "photo links links";
   padding: 10px;
+  margin: 25px 50px 0 15px;
+  border-radius: 15px;
+  &.light {
+    box-shadow: 4px 4px 15px $dark-color-sub-2;
+    background: linear-gradient(
+      -15deg,
+      $light-color-main,
+      rgba($dark-color-sub-2, 0.2)
+    );
+  }
+  &.dark {
+    box-shadow: 4px 4px 10px $dark-color-sub-2;
+    background: linear-gradient(
+      -15deg,
+      $dark-color-main,
+      rgba($dark-color-sub-2, 0.2)
+    );
+  }
 }
 
-.photo {
+.photoBox {
   grid-area: photo;
   padding: 10px;
+  justify-self: center;
+  align-self: center;
+  .photo {
+    border-radius: 10px;
+  }
 }
 .info {
   grid-area: info;
@@ -20,6 +43,7 @@
 .achievements {
   grid-area: achievements;
   padding: 10px;
+  justify-self: center;
 }
 .experience {
   grid-area: experience;
@@ -31,6 +55,8 @@
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
+  margin-top: 15px;
+  height: 35px;
 }
 
 .linkButton {
@@ -39,11 +65,11 @@
   padding: 5px 10px;
   &.light {
     color: $light-text;
-    border: 1px $light-text solid;
+    border: 1px $light-color-sub-2 solid;
   }
   &.dark {
     color: $dark-text;
-    border: 1px $dark-text solid;
+    border: 1px $dark-color-sub-2 solid;
   }
   &:hover {
     color: #fff;
