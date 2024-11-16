@@ -3,8 +3,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: 150px max-content 1fr;
-  grid-template-areas: "photo info info" "photo achievements experience" "photo links links";
+  grid-template-columns: 200px max-content 1fr 0.5fr;
+  grid-template-areas: "photo info info title" "photo achievements experience title" "photo links links title";
   padding: 10px;
   margin: 25px 50px 0 15px;
   border-radius: 15px;
@@ -25,7 +25,15 @@
     );
   }
 }
-
+.blockTitle {
+  grid-area: title;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  // margin: 20px 10px;
+  padding: 0 0 10px 0;
+  font-size: 1.5rem;
+}
 .photoBox {
   grid-area: photo;
   padding: 10px;
@@ -63,6 +71,7 @@
   font-size: 1.2rem;
   border-radius: 10px;
   padding: 5px 10px;
+
   &.light {
     color: $light-text;
     border: 1px $light-color-sub-2 solid;
@@ -76,14 +85,20 @@
     font-size: 1.3rem;
   }
 }
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 200px max-content 1fr;
+    grid-template-areas: "title title title" "photo info info" "photo achievements experience" "photo links links";
+  }
+}
 
 @media (max-width: 767px) {
   .container {
     .photo {
-      width: 200px;
+      width: 180px;
     }
-    grid-template-columns: 210px 1fr;
-    grid-template-areas: "photo info" "achievements experience" "links links";
+    grid-template-columns: 190px 1fr;
+    grid-template-areas: "title title" "photo info" "achievements experience" "links links";
   }
   .linkButton {
     font-size: 1.1rem;
@@ -99,11 +114,12 @@
 
 @media (max-width: 450px) {
   .container {
+    margin: 20px 25px 0 15px;
     .photo {
       justify-self: center;
     }
     grid-template-columns: 1fr;
-    grid-template-areas: "photo" "info" "experience" "achievements" "links";
+    grid-template-areas: "title" "photo" "info" "experience" "achievements" "links";
   }
   .links {
     grid-template-columns: none;

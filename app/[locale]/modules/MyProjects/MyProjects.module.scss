@@ -81,9 +81,9 @@
       background-color: $light-color-sub-1;
       color: $light-text;
       border: 1px $light-color-sub-2 solid;
-      .button {
-        background-color: aliceblue;
-      }
+      // .button {
+      //   background-color: aliceblue;
+      // }
     }
     &.dark {
       background-color: $dark-color-sub-1;

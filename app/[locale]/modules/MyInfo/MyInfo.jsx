@@ -17,6 +17,7 @@ export default function MyInfo() {
   const { t } = useTranslation("MyInfo")
   return (
     <div className={`${style.container} ${style[theme]}`}>
+      <div className={style.blockTitle}>{t("block-title")}</div>
       <div className={style.photoBox}>
         <Image
           className={style.photo}
@@ -32,7 +33,7 @@ export default function MyInfo() {
         ab asperiores rerum similique.
       </div>
       <div className={style.achievements}>
-        <li>github</li>
+        <li>Github</li>
         <li>Scss</li>
         <li>NextJS</li>
         <li>Typescript</li>
