@@ -1,4 +1,4 @@
-@import "colors-variables.scss";
+@use "colors-variables" as *;
 @mixin theme-changer($text, $color-main, $color-sub-1, $color-sub-2) {
   header,
   footer {

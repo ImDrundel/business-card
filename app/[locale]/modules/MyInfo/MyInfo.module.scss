@@ -1,5 +1,4 @@
-// @import "@/colors-variables.scss";
-@import "colors-variables.scss";
+@use "colors-variables" as *;
 
 .container {
   display: grid;

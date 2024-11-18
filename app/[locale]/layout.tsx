@@ -2,11 +2,16 @@ import type { Metadata } from "next"
 import "./globals.scss"
 import initTranstation from "../i18n"
 import TranslationsProvider from "@/app/[locale]/components/TranslationsProvider"
+import { Nunito_Sans } from "next/font/google"
 
 export const metadata: Metadata = {
   title: "Andrew's card",
   description: "Andrew's business card",
 }
+const font = Nunito_Sans({
+  weight: "400",
+  subsets: ["latin"],
+})
 interface Params {
   locale: string
 }
@@ -27,7 +32,7 @@ export default async function RootLayout({
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <html lang="en">
+      <html lang="en" className={font.className}>
         <body>{children}</body>
       </html>
     </TranslationsProvider>

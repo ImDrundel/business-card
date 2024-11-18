@@ -1,5 +1,5 @@
-@import "reset.scss";
-@import "colors-variables.scss";
+@use "reset";
+@use "colors-variables" as *;
 
 html,
 body {
@@ -8,5 +8,5 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   color: $dark-color-sub-2 !important;
-  //“impotent” is necessary because otherwise Swiper styles overwrite styles in global.scss
+  //“impotent” is necessary because otherwise Swiper styles overwrite styles even in global.scss
 }

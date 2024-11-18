@@ -1,4 +1,4 @@
-@import "colors-variables.scss";
+@use "colors-variables" as *;
 
 // ThemeContext.Provider does not wrap the page with a 404 error. The page will always have a dark theme with no possibility to change it
 .container {
